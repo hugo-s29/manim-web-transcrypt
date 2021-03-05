@@ -1,5 +1,5 @@
-import numpy as np
-import moderngl
+# import numpy as np
+# import moderngl
 
 from manimlib.constants import *
 from manimlib.mobject.mobject import Mobject

@@ -1,11 +1,14 @@
-import os
+# import os
 import re
-import moderngl
-import numpy as np
-import copy
+# import moderngl
+# import numpy as np
+# import copy
 
-from manimlib.utils.directories import get_shader_dir
-from manimlib.utils.file_ops import find_file
+import manimlib.utils.directories as directories
+import manimlib.utils.file_ops as file_ops
+
+get_shader_dir = directories.get_shader_dir
+find_file = file_ops.find_file
 
 # Mobjects that should be rendered with
 # the same shader will be organized and

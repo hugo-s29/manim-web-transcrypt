@@ -1,7 +1,7 @@
 import random
 
-from colour import Color
-import numpy as np
+# from colour import Color
+# import numpy as np
 
 from manimlib.constants import WHITE
 from manimlib.constants import COLORMAP_3B1B
@@ -128,7 +128,7 @@ def get_colormap_list(map_name="viridis", n_colors=9):
     twilight_shifted
     turbo
     """
-    from matplotlib.cm import get_cmap
+    # from matplotlib.cm import get_cmap
 
     if map_name == "3b1b_colormap":
         rgbs = [color_to_rgb(color) for color in COLORMAP_3B1B]

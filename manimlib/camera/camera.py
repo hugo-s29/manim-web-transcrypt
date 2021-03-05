@@ -1,9 +1,9 @@
-import moderngl
-from colour import Color
-import OpenGL.GL as gl
+# import moderngl
+# from colour import Color
+# import OpenGL.GL as gl
 
-from PIL import Image
-import numpy as np
+# from PIL import Image
+# import numpy as np
 import itertools as it
 
 from manimlib.constants import *

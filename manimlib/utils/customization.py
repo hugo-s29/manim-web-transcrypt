@@ -1,8 +1,10 @@
-import os
-import tempfile
+# import os
+# import tempfile
 
-from manimlib.config import get_custom_config
-from manimlib.config import get_manim_dir
+import manimlib.config as config
+
+get_custom_config = config.get_custom_config
+get_manim_dir = config.get_manim_dir
 
 CUSTOMIZATION = {}
 

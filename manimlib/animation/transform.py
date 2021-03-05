@@ -1,6 +1,6 @@
 import inspect
 
-import numpy as np
+# import numpy as np
 
 from manimlib.animation.animation import Animation
 from manimlib.constants import DEFAULT_POINTWISE_FUNCTION_RUN_TIME

@@ -1,4 +1,4 @@
-from copy import deepcopy
+# from copy import deepcopy
 
 from manimlib.mobject.mobject import _AnimationBuilder
 from manimlib.mobject.mobject import Mobject

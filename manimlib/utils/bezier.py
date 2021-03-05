@@ -1,5 +1,5 @@
-from scipy import linalg
-import numpy as np
+# from scipy import linalg
+# import numpy as np
 
 from manimlib.utils.simple_functions import choose
 from manimlib.utils.space_ops import find_intersection

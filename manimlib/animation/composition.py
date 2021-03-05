@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 from manimlib.animation.animation import Animation, prepare_animation
 from manimlib.mobject.mobject import Group

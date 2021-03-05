@@ -1,7 +1,7 @@
-from functools import reduce
+# from functools import reduce
 import inspect
-import numpy as np
-import operator as op
+# import numpy as np
+# import operator as op
 
 
 def sigmoid(x):

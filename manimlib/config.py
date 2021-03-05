@@ -1,11 +1,11 @@
-import argparse
-import colour
+# import argparse
+# import colour
 import inspect
-import importlib
-import os
+# import importlib
+# import os
 import sys
-import yaml
-from screeninfo import get_monitors
+#import yaml
+# from screeninfo import get_monitors
 
 from manimlib.utils.config_ops import merge_dicts_recursively
 from manimlib.utils.init_config import init_customization
@@ -175,7 +175,7 @@ def get_custom_config():
     else:
         with open(filename, "r") as file:
             config = yaml.safe_load(file)
-    
+
     return config
 
 

@@ -1,4 +1,4 @@
-import os
+# import os
 
 from manimlib.utils.file_ops import guarantee_existence
 from manimlib.utils.customization import get_customization

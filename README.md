@@ -4,6 +4,13 @@
     </a>
 </p>
 
+This project aims to be able to create Manim animations in python and play and interact with them in real-time with only a web browser.
+It uses a python tool named "Transcrypt" to convert all python files to javascript.
+However, many libraries need to be implemented in javascript.
+Please find more information about this in the [WEB.md](WEB.md) file.
+
+---
+
 [![pypi version](https://img.shields.io/pypi/v/manimgl?logo=pypi)](https://pypi.org/project/manimgl/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
 [![Manim Subreddit](https://img.shields.io/reddit/subreddit-subscribers/manim.svg?color=ff4301&label=reddit&logo=reddit)](https://www.reddit.com/r/manim/)
@@ -64,7 +71,7 @@ manim-render example_scenes.py OpeningManimExample
     ```sh
     brew install ffmpeg mactex
     ```
-   
+
 2. Install latest version of manim using these command.
     ```sh
     git clone https://github.com/3b1b/manim.git

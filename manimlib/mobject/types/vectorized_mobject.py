@@ -1,8 +1,8 @@
 import itertools as it
-import operator as op
-import moderngl
+# import operator as op
+# import moderngl
 
-from functools import reduce, wraps
+# from functools import reduce, wraps
 
 from manimlib.constants import *
 from manimlib.mobject.mobject import Mobject
@@ -25,7 +25,8 @@ from manimlib.utils.space_ops import earclip_triangulation
 from manimlib.utils.space_ops import get_norm
 from manimlib.utils.space_ops import get_unit_normal
 from manimlib.utils.space_ops import z_to_vector
-from manimlib.shader_wrapper import ShaderWrapper
+import manimlib.shader_wrapper as shader_wrapper
+ShaderWrapper = shader_wrapper.ShaderWrapper
 
 
 class VMobject(Mobject):

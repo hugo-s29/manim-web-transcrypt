@@ -1,6 +1,6 @@
-import numpy as np
+# import numpy as np
 
-from PIL import Image
+# from PIL import Image
 
 from manimlib.constants import *
 from manimlib.mobject.mobject import Mobject

@@ -1,5 +1,5 @@
 import itertools as it
-import numpy as np
+# import numpy as np
 
 
 def remove_list_redundancies(l):

@@ -1,7 +1,7 @@
-import numpy as np
+# import numpy as np
 import itertools as it
 import math
-from mapbox_earcut import triangulate_float32 as earcut
+# from mapbox_earcut import triangulate_float32 as earcut
 
 from manimlib.constants import RIGHT
 from manimlib.constants import DOWN

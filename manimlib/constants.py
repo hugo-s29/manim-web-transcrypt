@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 # Sizes relevant to default camera frame
 ASPECT_RATIO = 16.0 / 9.0

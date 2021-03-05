@@ -8,7 +8,7 @@ from manimlib.utils.rate_functions import linear
 from manimlib.utils.rate_functions import double_smooth
 from manimlib.utils.rate_functions import smooth
 
-import numpy as np
+# import numpy as np
 import itertools as it
 
 

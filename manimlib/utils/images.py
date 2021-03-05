@@ -1,5 +1,5 @@
-import numpy as np
-from PIL import Image
+# import numpy as np
+# from PIL import Image
 
 from manimlib.utils.file_ops import find_file
 from manimlib.utils.directories import get_raster_image_dir

@@ -1,5 +1,5 @@
-import numpy as np
-from pyglet.window import key as PygletWindowKeys
+# import numpy as np
+# from pyglet.window import key as PygletWindowKeys
 
 from manimlib.constants import FRAME_HEIGHT, FRAME_WIDTH
 from manimlib.constants import LEFT, RIGHT, UP, DOWN, ORIGIN

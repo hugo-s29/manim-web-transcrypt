@@ -1,6 +1,6 @@
-import os
-import numpy as np
-import validators
+# import os
+# import numpy as np
+# import validators
 
 
 def add_extension_if_not_present(file_name, extension):
@@ -21,8 +21,9 @@ def find_file(file_name, directories=None, extensions=None):
     # Check if this is a file online first, and if so, download
     # it to a temporary directory
     if validators.url(file_name):
-        import urllib.request
-        from manimlib.utils.directories import get_downloads_dir
+        # import urllib.request
+        import manimlib.utils.directories as manimdirectories
+        get_downloads_dir = manimdirectories.get_downloads_dir
         stem, name = os.path.split(file_name)
         folder = get_downloads_dir()
         path = os.path.join(folder, name)

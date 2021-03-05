@@ -1,11 +1,11 @@
-import copy
+# import copy
 import itertools as it
 import random
 import sys
-import moderngl
-from functools import wraps
+# import moderngl
+# from functools import wraps
 
-import numpy as np
+# import numpy as np
 
 from manimlib.constants import *
 from manimlib.utils.color import color_gradient

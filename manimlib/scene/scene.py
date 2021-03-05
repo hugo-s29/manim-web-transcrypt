@@ -1,12 +1,12 @@
 import inspect
 import random
-import platform
+# import platform
 import itertools as it
 import logging
-from functools import wraps
+# from functools import wraps
 
-from tqdm import tqdm as ProgressDisplay
-import numpy as np
+# from tqdm import tqdm as ProgressDisplay
+# import numpy as np
 import time
 
 from manimlib.animation.animation import prepare_animation
@@ -109,28 +109,28 @@ class Scene(object):
         if self.quit_interaction:
             self.unlock_mobject_data()
 
-    def embed(self):
-        if not self.preview:
-            # If the scene is just being
-            # written, ignore embed calls
-            return
-        self.stop_skipping()
-        self.linger_after_completion = False
-        self.update_frame()
-
-        from IPython.terminal.embed import InteractiveShellEmbed
-        shell = InteractiveShellEmbed()
-        # Have the frame update after each command
-        shell.events.register('post_run_cell', lambda *a, **kw: self.update_frame())
-        # Use the locals of the caller as the local namespace
-        # once embeded, and add a few custom shortcuts
-        local_ns = inspect.currentframe().f_back.f_locals
-        local_ns["touch"] = self.interact
-        for term in ("play", "wait", "add", "remove", "clear", "save_state", "restore"):
-            local_ns[term] = getattr(self, term)
-        shell(local_ns=local_ns, stack_depth=2)
-        # End scene when exiting an embed.
-        raise EndSceneEarlyException()
+    # def embed(self):
+    #     if not self.preview:
+    #         # If the scene is just being
+    #         # written, ignore embed calls
+    #         return
+    #     self.stop_skipping()
+    #     self.linger_after_completion = False
+    #     self.update_frame()
+    #
+    #     from IPython.terminal.embed import InteractiveShellEmbed
+    #     shell = InteractiveShellEmbed()
+    #     # Have the frame update after each command
+    #     shell.events.register('post_run_cell', lambda *a, **kw: self.update_frame())
+    #     # Use the locals of the caller as the local namespace
+    #     # once embeded, and add a few custom shortcuts
+    #     local_ns = inspect.currentframe().f_back.f_locals
+    #     local_ns["touch"] = self.interact
+    #     for term in ("play", "wait", "add", "remove", "clear", "save_state", "restore"):
+    #         local_ns[term] = getattr(self, term)
+    #     shell(local_ns=local_ns, stack_depth=2)
+    #     # End scene when exiting an embed.
+    #     raise EndSceneEarlyException()
 
     def __str__(self):
         return self.__class__.__name__

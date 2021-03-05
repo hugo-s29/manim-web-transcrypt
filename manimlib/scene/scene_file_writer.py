@@ -1,17 +1,21 @@
-import numpy as np
-from pydub import AudioSegment
-import shutil
-import subprocess as sp
-import os
+# import numpy as np
+# from pydub import AudioSegment
+# import shutil
+# import subprocess as sp
+# import os
 import sys
-import platform
+# import platform
 
-from manimlib.constants import FFMPEG_BIN
-from manimlib.utils.config_ops import digest_config
-from manimlib.utils.file_ops import guarantee_existence
-from manimlib.utils.file_ops import add_extension_if_not_present
-from manimlib.utils.file_ops import get_sorted_integer_files
-from manimlib.utils.sounds import get_full_sound_file_path
+import manimlib.constants as constants
+FFMPEG_BIN = constants.FFMPEG_BIN
+import manimlib.utils.config_ops as config_ops
+digest_config = config_ops.digest_config
+import manimlib.utils.file_ops as file_ops
+guarantee_existence = file_ops.guarantee_existence
+add_extension_if_not_present = file_ops.add_extension_if_not_present
+get_sorted_integer_files = file_ops.get_sorted_integer_files
+import manimlib.utils.sounds as utils_sound
+get_full_sound_file_path = utils_sound.get_full_sound_file_path
 
 
 class SceneFileWriter(object):

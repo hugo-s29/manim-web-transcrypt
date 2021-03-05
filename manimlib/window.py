@@ -1,7 +1,7 @@
-import moderngl_window as mglw
-from moderngl_window.context.pyglet.window import Window as PygletWindow
-from moderngl_window.timers.clock import Timer
-from screeninfo import get_monitors
+# import moderngl_window as mglw
+# from moderngl_window.context.pyglet.window import Window as PygletWindow
+# from moderngl_window.timers.clock import Timer
+# from screeninfo import get_monitors
 
 from manimlib.utils.config_ops import digest_config
 from manimlib.utils.customization import get_customization

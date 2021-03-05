@@ -1,5 +1,5 @@
-import numpy as np
-import moderngl
+# import numpy as np
+# import moderngl
 
 from manimlib.constants import GREY_C
 from manimlib.mobject.types.point_cloud_mobject import PMobject

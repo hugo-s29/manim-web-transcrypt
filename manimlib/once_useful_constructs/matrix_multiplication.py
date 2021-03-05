@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 from manimlib.animation.creation import ShowCreation
 from manimlib.animation.fading import FadeOut

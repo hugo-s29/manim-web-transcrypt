@@ -2,7 +2,7 @@ from functools import reduce
 import itertools as it
 import operator as op
 
-import numpy as np
+# import numpy as np
 
 from manimlib.constants import *
 from manimlib.scene.scene import Scene

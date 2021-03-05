@@ -1,20 +1,20 @@
-import copy
-import hashlib
-import os
+# import copy
+# import hashlib
+# import os
 import re
 import typing
-from contextlib import contextmanager
-from pathlib import Path
+# from contextlib import contextmanager
+# from pathlib import Path
 
-import manimpango
+# import manimpango
 from manimlib.constants import *
 from manimlib.mobject.geometry import Dot
 from manimlib.mobject.svg.svg_mobject import SVGMobject
 from manimlib.utils.config_ops import digest_config
 from manimlib.utils.customization import get_customization
 from manimlib.utils.directories import get_downloads_dir, get_text_dir
-from manimpango import PangoUtils
-from manimpango import TextSetting
+# from manimpango import PangoUtils
+# from manimpango import TextSetting
 
 TEXT_MOB_SCALE_FACTOR = 0.001048
 

@@ -1,5 +1,5 @@
-import numpy as np
-import numbers
+# import numpy as np
+# import numbers
 
 from manimlib.constants import *
 from manimlib.mobject.functions import ParametricCurve

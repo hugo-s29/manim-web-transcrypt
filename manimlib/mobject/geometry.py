@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 from manimlib.constants import *
 from manimlib.mobject.mobject import Mobject

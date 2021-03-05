@@ -1,8 +1,8 @@
 import logging
 import sys
-import os
-import hashlib
-from contextlib import contextmanager
+# import os
+# import hashlib
+# from contextlib import contextmanager
 
 from manimlib.utils.directories import get_tex_dir
 from manimlib.config import get_manim_dir

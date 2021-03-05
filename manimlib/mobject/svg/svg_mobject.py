@@ -1,16 +1,21 @@
 import itertools as it
 import re
-import string
+# import string
 import warnings
-import os
-import hashlib
+# import os
+# import hashlib
 
-from xml.dom import minidom
+# from xml.dom import minidom
 
-from manimlib.constants import DEFAULT_STROKE_WIDTH
-from manimlib.constants import ORIGIN, UP, DOWN, LEFT, RIGHT
-from manimlib.constants import BLACK
-from manimlib.constants import WHITE
+import manimlib.constants as constants
+DEFAULT_STROKE_WIDTH = constants.DEFAULT_STROKE_WIDTH
+RIGHT = constants.RIGHT
+LEFT = constants.LEFT
+DOWN = constants.DOWN
+UP = constants.UP
+ORIGIN = constants.ORIGIN
+BLACK = constants.BLACK
+WHITE = constants.WHITE
 
 from manimlib.mobject.geometry import Circle
 from manimlib.mobject.geometry import Rectangle

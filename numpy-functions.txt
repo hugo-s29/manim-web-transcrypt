@@ -1,0 +1,570 @@
+################################
+np.all
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:227 => np.all(point >= (bb[0] - buff),np.all(point <= (bb[2] + buff)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:820 => np.all(curr_vect == 0)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1279 => np.all(sm1.data[key] == sm2.data[key])
+E:\Animations\manim-original\manimlib\utils\space_ops.py:343 => np.all(crosses > 0),np.all(crosses < 0)
+
+
+
+################################
+np.allclose
+################################
+E:\Animations\manim-original\manimlib\utils\bezier.py:224 => np.allclose(points[0], points[-1])
+
+
+
+################################
+np.dot
+################################
+E:\Animations\manim-original\manimlib\animation\transform.py:247 => np.dot(p, matrix.T)
+E:\Animations\manim-original\manimlib\camera\camera.py:68 => np.dot(curr_rot_T, added_rot_T)
+E:\Animations\manim-original\manimlib\camera\camera.py:76 => np.dot(partial_rot_T, new_rot_T.T)
+E:\Animations\manim-original\manimlib\camera\camera.py:432 => np.dot(rotation, light_pos)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:620 => np.dot(points, rot_T)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:586 => np.dot(points, rot_matrix_T)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:621 => np.dot(points, full_matrix.T)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:639 => np.dot(mob.get_points(),np.transpose(axis)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:709 => np.dot(edge_center, vect)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:974 => np.argmax(np.dot(boundary_directions, np.array(direction)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:143 => np.dot(points[tri_is[3 * index]], vect)
+E:\Animations\manim-original\manimlib\scene\scene.py:538 => np.dot(np.transpose(transform)
+E:\Animations\manim-original\manimlib\scene\scene.py:573 => np.dot(np.transpose(transform)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:442 => np.dot(point, transposed_matrix)
+E:\Animations\manim-original\manimlib\utils\color.py:110 => np.dot(unit_normal_vect, to_sun)
+E:\Animations\manim-original\manimlib\utils\paths.py:39 => np.dot(start_points - centers, rot_matrix_T)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:145 => np.arccos(np.dot(OUT, normalize(vector)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:167 => np.dot(point, matrix.T)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:300 => np.dot(p - b, a - b),np.dot(a - b, a - b)
+
+
+
+################################
+np.repeat
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:973 => np.repeat(norms, 3)
+E:\Animations\manim-original\manimlib\mobject\types\dot_cloud.py:46 => np.repeat(range(n_points)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:183 => np.repeat(norms, array.shape[axis])
+E:\Animations\manim-original\manimlib\utils\space_ops.py:289 => np.repeat(ratio, n)
+
+
+
+################################
+np.multiply
+################################
+E:\Animations\manim-original\manimlib\utils\space_ops.py:283 => np.multiply(numer, numer)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:284 => np.multiply(denom, numer)
+
+
+
+################################
+np.shape
+################################
+E:\Animations\manim-original\manimlib\utils\bezier.py:286 => np.shape(a0)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:276 => np.shape(p0)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:282 => np.shape(numer)
+
+
+
+################################
+np.cross
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:729 => np.sign(np.cross(vect1, vect2)
+E:\Animations\manim-original\manimlib\utils\paths.py:37 => np.cross(unit_axis, vects / 2.0)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:279 => np.cross(v1, p1 - p0)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:280 => np.cross(v1, v0)
+
+
+
+################################
+np.array
+################################
+E:\Animations\manim-original\manimlib\animation\indication.py:239 => np.array([x, y, z])
+E:\Animations\manim-original\manimlib\animation\transform.py:252 => np.array(matrix)
+E:\Animations\manim-original\manimlib\camera\camera.py:33 => np.array(self.euler_angles, dtype=float)
+E:\Animations\manim-original\manimlib\camera\camera.py:316 => np.array([px / pw, py / ph, 0])
+E:\Animations\manim-original\manimlib\camera\camera.py:320 => np.array([(px - pw / 2)
+E:\Animations\manim-original\manimlib\camera\camera.py:438 => np.array(rotation)
+E:\Animations\manim-original\manimlib\constants.py:28 => np.array((0., 0., 0.)
+E:\Animations\manim-original\manimlib\constants.py:29 => np.array((0., 1., 0.)
+E:\Animations\manim-original\manimlib\constants.py:30 => np.array((0., -1., 0.)
+E:\Animations\manim-original\manimlib\constants.py:31 => np.array((1., 0., 0.)
+E:\Animations\manim-original\manimlib\constants.py:32 => np.array((-1., 0., 0.)
+E:\Animations\manim-original\manimlib\constants.py:33 => np.array((0., 0., -1.)
+E:\Animations\manim-original\manimlib\constants.py:34 => np.array((0., 0., 1.)
+E:\Animations\manim-original\manimlib\constants.py:35 => np.array((1., 0., 0.)
+E:\Animations\manim-original\manimlib\constants.py:36 => np.array((0., 1., 0.)
+E:\Animations\manim-original\manimlib\constants.py:37 => np.array((0., 0., 1.)
+E:\Animations\manim-original\manimlib\event_handler\event_dispatcher.py:13 => np.array((0., 0., 0.)
+E:\Animations\manim-original\manimlib\event_handler\event_dispatcher.py:14 => np.array((0., 0., 0.)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:601 => np.array([RIGHT, 0.5 * RIGHT, ORIGIN])
+E:\Animations\manim-original\manimlib\mobject\geometry.py:613 => np.array(points1[::-1])
+E:\Animations\manim-original\manimlib\mobject\matrix.py:17 => np.array(matrix)
+E:\Animations\manim-original\manimlib\mobject\matrix.py:36 => np.array(vector_mob.get_end()
+E:\Animations\manim-original\manimlib\mobject\matrix.py:44 => np.array(vector_mob.get_end()
+E:\Animations\manim-original\manimlib\mobject\matrix.py:75 => np.array(matrix, ndmin=2)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:131 => np.array(points)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:215 => np.array([mins, mids, maxs])
+E:\Animations\manim-original\manimlib\mobject\mobject.py:599 => np.array([function(p)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:618 => np.array(matrix)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:645 => np.array(direction)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:662 => np.array(direction)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:679 => np.array([1, 1, 1])
+E:\Animations\manim-original\manimlib\mobject\mobject.py:782 => np.array([1, 1, 1])
+E:\Animations\manim-original\manimlib\mobject\mobject.py:838 => np.array([color_to_rgb(c)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:974 => np.argmax(np.dot(boundary_directions, np.array(direction)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1034 => np.array(self.get_points()
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1038 => np.array(self.get_points()
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1573 => np.array(new_loc, ndmin=2, dtype=float)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:32 => np.array([UL, DL, UR, DR])
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:33 => np.array([(0, 0)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:34 => np.array([[self.opacity]], dtype=np.float32)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:44 => np.array([[o] for o in listify(opacity)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:61 => np.array(rgb)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:60 => np.array([[[u + du, v + dv] for v in v_range] for u in u_range])
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:244 => np.array([self.uv_surface.data["rgbas"][:, 3]])
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:248 => np.array([[o] for o in listify(opacity)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:55 => np.array(list(map(color_to_rgb, colors)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:59 => np.array(values)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:172 => np.array(self.func(point)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:183 => np.array([norm])
+E:\Animations\manim-original\manimlib\once_useful_constructs\arithmetic.py:70 => np.array(start_terms + end_terms)
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:133 => np.pi / 6) * np.array([s, 4 + s, 8 + s])
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:375 => np.array([np.inf] * 3)
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:405 => np.array(dual_point_pair[1 - i])
+E:\Animations\manim-original\manimlib\once_useful_constructs\matrix_multiplication.py:25 => np.array(matrix)
+E:\Animations\manim-original\manimlib\once_useful_constructs\matrix_multiplication.py:42 => np.array([VGroup()
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:256 => np.append(np.array(vector)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:322 => np.array(self.t_matrix)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:432 => np.array(matrix)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:435 => np.array(transposed_matrix)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:475 => np.array(matrix)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:491 => np.linalg.inv(np.array(t_matrix)
+E:\Animations\manim-original\manimlib\shader_wrapper.py:40 => np.array(self.vert_data)
+E:\Animations\manim-original\manimlib\shader_wrapper.py:42 => np.array(self.vert_indices)
+E:\Animations\manim-original\manimlib\utils\bezier.py:149 => np.array(points)
+E:\Animations\manim-original\manimlib\utils\bezier.py:230 => np.array(a0, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\bezier.py:231 => np.array(h0, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\bezier.py:232 => np.array(h1, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\bezier.py:233 => np.array(a1, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\color.py:18 => np.array(color.get_rgb()
+E:\Animations\manim-original\manimlib\utils\color.py:24 => np.array([*color_to_rgb(color)
+E:\Animations\manim-original\manimlib\utils\color.py:66 => np.array([*color_to_int_rgb(color)
+E:\Animations\manim-original\manimlib\utils\color.py:91 => np.array(list(map(color_to_rgb, colors)
+E:\Animations\manim-original\manimlib\utils\images.py:29 => np.array(frame)
+E:\Animations\manim-original\manimlib\utils\images.py:30 => np.array(curr)
+E:\Animations\manim-original\manimlib\utils\images.py:35 => np.array(image)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:77 => np.array(result)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:173 => np.array(vect)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:223 => np.array((complex_num.real, complex_num.imag, 0)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:235 => np.array(point)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:261 => np.array([x, y, 0])
+E:\Animations\manim-original\manimlib\utils\space_ops.py:272 => np.array(p0, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:273 => np.array(v0, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:274 => np.array(p1, ndmin=2)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:275 => np.array(v1, ndmin=2)
+
+
+
+################################
+np.zeros
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:225 => np.zeros((3 * n_components, 3)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:456 => np.zeros(self.dim)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:88 => np.zeros((0, 3)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:89 => np.zeros((3, 3)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:90 => np.zeros((1, 4)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:209 => np.zeros((3, self.dim)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:761 => np.zeros(self.dim)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:982 => np.zeros(len(direction)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1368 => np.zeros(len(self.get_points()
+E:\Animations\manim-original\manimlib\mobject\types\dot_cloud.py:35 => np.zeros((1, 1)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:75 => np.zeros(0, dtype=int)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:78 => np.zeros(6 * (nu - 1)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:227 => np.zeros((0, 2)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:228 => np.zeros((0, 1)
+E:\Animations\manim-original\manimlib\mobject\value_tracker.py:23 => np.zeros((1, 1)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:36 => np.zeros((ph, pw, 3)
+E:\Animations\manim-original\manimlib\utils\bezier.py:153 => np.zeros((0, dim),np.zeros((0, dim)
+E:\Animations\manim-original\manimlib\utils\bezier.py:161 => np.zeros((l + u + 1, 2 * num_handles)
+E:\Animations\manim-original\manimlib\utils\bezier.py:174 => np.zeros((2 * num_handles, dim)
+E:\Animations\manim-original\manimlib\utils\bezier.py:189 => np.zeros(matrix.shape[1])
+E:\Animations\manim-original\manimlib\utils\bezier.py:192 => np.zeros(dim)
+E:\Animations\manim-original\manimlib\utils\bezier.py:197 => np.zeros((2 * num_handles, dim)
+E:\Animations\manim-original\manimlib\utils\bezier.py:214 => np.zeros((dim, dim)
+E:\Animations\manim-original\manimlib\utils\bezier.py:287 => np.zeros((6 * m, n)
+E:\Animations\manim-original\manimlib\utils\iterables.py:91 => np.zeros((length, *nparray.shape[1:])
+E:\Animations\manim-original\manimlib\utils\space_ops.py:177 => np.zeros(len(vect)
+
+
+
+################################
+np.identity
+################################
+E:\Animations\manim-original\manimlib\animation\transform.py:254 => np.identity(3)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:617 => np.identity(self.dim)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:437 => np.identity(3)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:142 => np.identity(3)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:166 => np.identity(3),np.outer(vector, vector)
+
+
+
+################################
+np.angle
+################################
+E:\Animations\manim-original\manimlib\utils\space_ops.py:153 => np.angle(complex(*vector[:2])
+
+
+
+################################
+np.transpose
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:639 => np.dot(mob.get_points(),np.transpose(axis)
+E:\Animations\manim-original\manimlib\once_useful_constructs\matrix_multiplication.py:69 => np.transpose(right.get_mob_matrix()
+E:\Animations\manim-original\manimlib\scene\scene.py:538 => np.dot(np.transpose(transform)
+E:\Animations\manim-original\manimlib\scene\scene.py:573 => np.dot(np.transpose(transform)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:83 => np.transpose(row_indices)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:100 => np.transpose(rotation_matrix_transpose_from_quaternion(quat)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:123 => np.transpose(rotation_matrix_transpose(angle, axis)
+
+
+
+################################
+np.abs
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:705 => np.argmax(np.abs(vect)
+E:\Animations\manim-original\manimlib\utils\bezier.py:253 => np.sqrt(np.abs(disc)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:84 => np.abs(row_indices - col_indices)
+
+
+
+################################
+np.arange
+################################
+E:\Animations\manim-original\manimlib\animation\indication.py:92 => np.arange(0, TAU, TAU / self.num_lines)
+E:\Animations\manim-original\manimlib\mobject\coordinate_systems.py:157 => np.arange(*self.x_range)
+E:\Animations\manim-original\manimlib\mobject\coordinate_systems.py:213 => np.arange(*x_range)
+E:\Animations\manim-original\manimlib\mobject\coordinate_systems.py:415 => np.arange(axis2.x_min, axis2.x_max + step, step)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1191 => np.arange(target)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:77 => np.arange(nu * nv)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:233 => np.arange(0, self.virtual_time, dt)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:280 => np.arange(x_min, x_max + delta_x, delta_x)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:281 => np.arange(y_min, y_max + delta_y, delta_y)
+E:\Animations\manim-original\manimlib\scene\scene.py:270 => np.arange(0, run_time, step)
+E:\Animations\manim-original\manimlib\utils\iterables.py:94 => np.arange(length)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:82 => np.arange(dim)
+
+
+
+################################
+np.arcos
+################################
+
+
+
+################################
+np.arccos
+################################
+E:\Animations\manim-original\manimlib\camera\camera.py:70 => np.arccos(Fz[2])
+E:\Animations\manim-original\manimlib\mobject\geometry.py:640 => np.arccos(normalize(vect)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:49 => np.arccos(quaternion[0])
+E:\Animations\manim-original\manimlib\utils\space_ops.py:145 => np.arccos(np.dot(OUT, normalize(vector)
+
+
+
+################################
+np.mean
+################################
+E:\Animations\manim-original\manimlib\utils\simple_functions.py:83 => np.mean([lh, rh])
+
+
+
+################################
+np.true_divide
+################################
+E:\Animations\manim-original\manimlib\utils\bezier.py:108 => np.true_divide(value - start, end - start)
+E:\Animations\manim-original\manimlib\utils\simple_functions.py:72 => np.true_divide(a, b, out=out, where=where)
+
+
+
+################################
+np.logical_or
+################################
+E:\Animations\manim-original\manimlib\utils\simple_functions.py:67 => np.logical_or(a != 0, b != 0)
+
+
+
+################################
+np.exp
+################################
+E:\Animations\manim-original\manimlib\animation\indication.py:237 => np.exp(2.0 * (alpha - 0.5)
+E:\Animations\manim-original\manimlib\mobject\value_tracker.py:44 => np.exp(ValueTracker.get_value(self)
+E:\Animations\manim-original\manimlib\utils\rate_functions.py:91 => np.exp(-t / half_life)
+E:\Animations\manim-original\manimlib\utils\simple_functions.py:8 => np.exp(-x)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:65 => np.exp(complex(0, angle)
+
+
+
+################################
+np.clip
+################################
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:61 => np.clip(alphas, 0, 1)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:66 => np.clip(indices + 1, 0, len(rgbs)
+
+
+
+################################
+np.float32
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:58 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\dot_cloud.py:22 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\dot_cloud.py:23 => np.float32, (1,)
+E:\Animations\manim-original\manimlib\mobject\types\dot_cloud.py:24 => np.float32, (4,)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:18 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:19 => np.float32, (2,)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:20 => np.float32, (1,)
+E:\Animations\manim-original\manimlib\mobject\types\image_mobject.py:34 => np.array([[self.opacity]], dtype=np.float32)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:33 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:34 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:35 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:36 => np.float32, (4,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:195 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:196 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:197 => np.float32, (3,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:198 => np.float32, (2,)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:199 => np.float32, (1,)
+
+
+
+################################
+np.floor
+################################
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:134 => np.floor(-FRAME_WIDTH / 2)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:136 => np.floor(-FRAME_HEIGHT / 2)
+
+
+
+################################
+np.ceil
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:513 => np.ceil(self.get_length()
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:135 => np.ceil(FRAME_WIDTH / 2)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:137 => np.ceil(FRAME_HEIGHT / 2)
+E:\Animations\manim-original\manimlib\once_useful_constructs\arithmetic.py:93 => np.ceil(alpha * len(self.tex_list)
+E:\Animations\manim-original\manimlib\scene\scene_file_writer.py:127 => np.ceil(diff * 1000)
+E:\Animations\manim-original\manimlib\utils\iterables.py:105 => np.ceil(ci)
+
+
+
+################################
+np.linspace
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:1055 => np.linspace(0, 1, n_pieces + 1)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:51 => np.linspace(*self.u_range, nu)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:52 => np.linspace(*self.v_range, nv)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:235 => np.linspace(0, 1, nu)
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:236 => np.linspace(1, 0, nv)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:37 => np.linspace(-fw / 2, fw / 2, pw)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:41 => np.linspace(fh / 2, -fh / 2, ph)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:306 => np.linspace(0, max_stroke_width, self.n_segments)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:307 => np.linspace(max_time_width, 0, self.n_segments)
+E:\Animations\manim-original\manimlib\utils\color.py:73 => np.linspace(0, (len(rgbs)
+E:\Animations\manim-original\manimlib\utils\color.py:122 => np.linspace(0, len(rgbs)
+E:\Animations\manim-original\manimlib\utils\iterables.py:101 => np.linspace(0, len(nparray)
+
+
+
+################################
+np.sign
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:725 => np.sign(radius)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:729 => np.sign(np.cross(vect1, vect2)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:660 => np.sign(direction)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:663 => np.sign(direction)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:951 => np.sign(direction)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:160 => np.sign(vector[1])
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:165 => np.sign(vector[0])
+
+
+
+################################
+np.cos
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:215 => np.cos(a),np.sin(a)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:223 => np.cos(theta / 2)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:606 => np.cos(path_arc)
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:131 => np.cos(angle),np.sin(angle)
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:169 => np.cos(theta),np.sin(theta)
+
+
+
+################################
+np.sin
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:215 => np.cos(a),np.sin(a)
+E:\Animations\manim-original\manimlib\mobject\geometry.py:607 => np.sin(path_arc)
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:131 => np.cos(angle),np.sin(angle)
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:169 => np.cos(theta),np.sin(theta)
+E:\Animations\manim-original\manimlib\utils\rate_functions.py:62 => np.sin(wiggles * np.pi * t)
+
+
+
+################################
+np.sqrt
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:609 => np.sqrt(b**2 - 4 * a * c)
+E:\Animations\manim-original\manimlib\mobject\mobject.py:330 => np.sqrt(len(submobs)
+E:\Animations\manim-original\manimlib\utils\bezier.py:253 => np.sqrt(np.abs(disc)
+E:\Animations\manim-original\manimlib\utils\rate_functions.py:26 => np.sqrt(1 - (1 - t)
+E:\Animations\manim-original\manimlib\utils\space_ops.py:181 => np.sqrt((array * array)
+
+
+
+################################
+np.vstack
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:136 => np.vstack([self.data["points"], new_points])
+E:\Animations\manim-original\manimlib\mobject\mobject.py:186 => np.vstack([sm.get_points()
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:67 => np.vstack(point_lists)
+E:\Animations\manim-original\manimlib\utils\bezier.py:143 => np.vstack([smooth_to_right, [last_str]])
+E:\Animations\manim-original\manimlib\utils\bezier.py:144 => np.vstack([last_stl, smooth_to_left[::-1]])
+
+
+
+################################
+np.random_seed
+################################
+
+
+
+################################
+np.hstack
+################################
+E:\Animations\manim-original\manimlib\mobject\geometry.py:687 => np.hstack([direction, 0])
+E:\Animations\manim-original\manimlib\shader_wrapper.py:117 => np.hstack(indices_list)
+E:\Animations\manim-original\manimlib\shader_wrapper.py:118 => np.hstack(data_list)
+E:\Animations\manim-original\manimlib\shader_wrapper.py:120 => np.hstack([self.vert_data, *[sw.vert_data for sw in shader_wrappers]])
+
+
+
+################################
+np.ones
+################################
+E:\Animations\manim-original\manimlib\utils\bezier.py:241 => np.ones(len(a0)
+E:\Animations\manim-original\manimlib\utils\bezier.py:270 => np.ones(len(a0)
+E:\Animations\manim-original\manimlib\utils\color.py:99 => np.ones(len(curr_rgb)
+E:\Animations\manim-original\manimlib\utils\images.py:36 => np.ones(arr.shape)
+
+
+
+################################
+np.seterr
+################################
+E:\Animations\manim-original\manimlib\utils\bezier.py:254 => np.seterr(all='ignore')
+E:\Animations\manim-original\manimlib\utils\bezier.py:262 => np.seterr(**settings)
+
+
+
+################################
+np.isclose
+################################
+E:\Animations\manim-original\manimlib\utils\bezier.py:137 => np.isclose(points[0], points[-1])
+
+
+
+################################
+np.linalg.inv
+################################
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:478 => np.linalg.inv(matrix)
+E:\Animations\manim-original\manimlib\scene\vector_space_scene.py:491 => np.linalg.inv(np.array(t_matrix)
+
+
+
+################################
+np.arctan
+################################
+E:\Animations\manim-original\manimlib\once_useful_constructs\graph_theory.py:266 => np.arctan, list(map(Line.get_slope, self.edges)
+E:\Animations\manim-original\manimlib\scene\scene.py:569 => np.arctan(10 * offset[1])
+
+
+
+################################
+np.random.random
+################################
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:80 => np.random.random(size=(10, 3)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:278 => np.random.random(3)
+
+
+
+################################
+np.random.seed
+################################
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:79 => np.random.seed(0)
+E:\Animations\manim-original\manimlib\scene\scene.py:67 => np.random.seed(self.random_seed)
+
+
+
+################################
+np.log
+################################
+E:\Animations\manim-original\manimlib\animation\transform.py:270 => np.log(func1)
+E:\Animations\manim-original\manimlib\mobject\value_tracker.py:47 => np.log(value)
+E:\Animations\manim-original\manimlib\utils\simple_functions.py:67 => np.logical_or(a != 0, b != 0)
+
+
+
+################################
+np.dtype
+################################
+E:\Animations\manim-original\manimlib\mobject\interactive.py:86 => np.dtype(bool)
+E:\Animations\manim-original\manimlib\mobject\interactive.py:121 => np.dtype(bool)
+E:\Animations\manim-original\manimlib\mobject\interactive.py:349 => np.dtype(object)
+
+
+
+################################
+np.round
+################################
+E:\Animations\manim-original\manimlib\animation\transform_matching_parts.py:125 => np.round(mobject.get_points()
+E:\Animations\manim-original\manimlib\mobject\matrix.py:38 => np.round(vect)
+E:\Animations\manim-original\manimlib\mobject\svg\brace.py:54 => np.round(self.get_direction()
+
+
+
+################################
+np.frombuffer
+################################
+E:\Animations\manim-original\manimlib\camera\camera.py:254 => np.frombuffer(raw, dtype='f4')
+
+
+
+################################
+np.linalg.norm
+################################
+E:\Animations\manim-original\manimlib\mobject\mobject.py:972 => np.linalg.norm(boundary_directions, axis=1)
+
+
+
+################################
+np.apply_along_axis
+################################
+E:\Animations\manim-original\manimlib\mobject\types\point_cloud_mobject.py:55 => np.apply_along_axis(condition, 1, mob.get_points()
+E:\Animations\manim-original\manimlib\mobject\types\point_cloud_mobject.py:66 => np.apply_along_axis(function, 1, mob.get_points()
+E:\Animations\manim-original\manimlib\mobject\types\surface.py:61 => np.apply_along_axis(lambda p: self.uv_func(*p)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:46 => np.apply_along_axis(scalar_field_func, 2, points_array)
+E:\Animations\manim-original\manimlib\mobject\vector_field.py:81 => np.apply_along_axis(scalar_func, 1, sample_inputs)
+
+
+
+################################
+np.max
+################################
+E:\Animations\manim-original\manimlib\scene\scene.py:280 => np.max([animation.run_time for animation in animations])
+
+
+
+################################
+np.full_like
+################################
+E:\Animations\manim-original\manimlib\utils\simple_functions.py:66 => np.full_like(a, zero_over_zero_value)
