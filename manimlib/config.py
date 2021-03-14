@@ -1,14 +1,14 @@
 # import argparse
 # import colour
 import inspect
-# import importlib
 # import os
 import sys
-#import yaml
+# import yaml
 # from screeninfo import get_monitors
 
+import manimlib.files_data
+
 from manimlib.utils.config_ops import merge_dicts_recursively
-from manimlib.utils.init_config import init_customization
 
 
 def parse_cli():
@@ -138,126 +138,89 @@ def parse_cli():
         print(str(err))
         sys.exit(2)
 
-
-def get_manim_dir():
-    manimlib_module = importlib.import_module("manimlib")
-    manimlib_dir = os.path.dirname(inspect.getabsfile(manimlib_module))
-    return os.path.abspath(os.path.join(manimlib_dir, ".."))
-
-
-def get_module(file_name):
-    if file_name is None:
-        return None
-    else:
-        module_name = file_name.replace(os.sep, ".").replace(".py", "")
-        spec = importlib.util.spec_from_file_location(module_name, file_name)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        return module
-
-
 def get_custom_config():
-    filename = "custom_config.yml"
-    global_defaults_file = os.path.join(get_manim_dir(), "manimlib", "default_config.yml")
-
-    if os.path.exists(global_defaults_file):
-        with open(global_defaults_file, "r") as file:
-            config = yaml.safe_load(file)
-
-        if os.path.exists(filename):
-            with open(filename, "r") as file:
-                local_defaults = yaml.safe_load(file)
-            if local_defaults:
-                config = merge_dicts_recursively(
-                    config,
-                    local_defaults,
-                )
-    else:
-        with open(filename, "r") as file:
-            config = yaml.safe_load(file)
-
-    return config
+    return files_data.config
 
 
-def get_configuration(args):
-    local_config_file = "custom_config.yml"
-    global_defaults_file = os.path.join(get_manim_dir(), "manimlib", "default_config.yml")
-    if not (os.path.exists(global_defaults_file) or os.path.exists(local_config_file)):
-        print("There is no configuration file detected. Initial configuration:\n")
-        init_customization()
-    elif not os.path.exists(local_config_file):
-        print(f"""Warning: Using the default configuration file, which you can modify in {global_defaults_file}
-        If you want to create a local configuration file, you can create a file named {local_config_file}, or run manimgl --config
-        """)
-    custom_config = get_custom_config()
+# def get_module(file_name):
+#     if file_name is None:
+#         return None
+#     else:
+#         module_name = file_name.replace(os.sep, ".").replace(".py", "")
+#         spec = importlib.util.spec_from_file_location(module_name, file_name)
+#         module = importlib.util.module_from_spec(spec)
+#         spec.loader.exec_module(module)
+#         return module
 
-    write_file = any([args.write_file, args.open, args.finder])
-    if args.transparent:
-        file_ext = ".mov"
-    elif args.gif:
-        file_ext = ".gif"
-    else:
-        file_ext = ".mp4"
 
-    file_writer_config = {
-        "write_to_movie": not args.skip_animations and write_file,
-        "break_into_partial_movies": custom_config["break_into_partial_movies"],
-        "save_last_frame": args.skip_animations and write_file,
-        "save_pngs": args.save_pngs,
-        # If -t is passed in (for transparent), this will be RGBA
-        "png_mode": "RGBA" if args.transparent else "RGB",
-        "movie_file_extension": file_ext,
-        "mirror_module_path": custom_config["directories"]["mirror_module_path"],
-        "output_directory": args.video_dir or custom_config["directories"]["output"],
-        "file_name": args.file_name,
-        "input_file_path": args.file or "",
-        "open_file_upon_completion": args.open,
-        "show_file_location_upon_completion": args.finder,
-        "quiet": args.quiet,
-    }
-
-    module = get_module(args.file)
-    config = {
-        "module": module,
-        "scene_names": args.scene_names,
-        "file_writer_config": file_writer_config,
-        "quiet": args.quiet or args.write_all,
-        "write_all": args.write_all,
-        "start_at_animation_number": args.start_at_animation_number,
-        "preview": not write_file,
-        "end_at_animation_number": None,
-        "leave_progress_bars": args.leave_progress_bars,
-    }
-
-    # Camera configuration
-    config["camera_config"] = get_camera_configuration(args, custom_config)
-
-    # Default to making window half the screen size
-    # but make it full screen if -f is passed in
-    monitor = get_monitors()[custom_config["window_monitor"]]
-    window_width = monitor.width
-    if not args.full_screen:
-        window_width //= 2
-    window_height = window_width * 9 // 16
-    config["window_config"] = {
-        "size": (window_width, window_height),
-    }
-
-    # Arguments related to skipping
-    stan = config["start_at_animation_number"]
-    if stan is not None:
-        if "," in stan:
-            start, end = stan.split(",")
-            config["start_at_animation_number"] = int(start)
-            config["end_at_animation_number"] = int(end)
-        else:
-            config["start_at_animation_number"] = int(stan)
-
-    config["skip_animations"] = any([
-        args.skip_animations,
-        args.start_at_animation_number,
-    ])
-    return config
+# def get_configuration(args, custom_config = get_custom_config()):
+#     write_file = any([args.write_file, args.open, args.finder])
+#     if args.transparent:
+#         file_ext = ".mov"
+#     elif args.gif:
+#         file_ext = ".gif"
+#     else:
+#         file_ext = ".mp4"
+#
+#     file_writer_config = {
+#         "write_to_movie": not args.skip_animations and write_file,
+#         "break_into_partial_movies": custom_config["break_into_partial_movies"],
+#         "save_last_frame": args.skip_animations and write_file,
+#         "save_pngs": args.save_pngs,
+#         # If -t is passed in (for transparent), this will be RGBA
+#         "png_mode": "RGBA" if args.transparent else "RGB",
+#         "movie_file_extension": file_ext,
+#         "mirror_module_path": custom_config["directories"]["mirror_module_path"],
+#         "output_directory": args.video_dir or custom_config["directories"]["output"],
+#         "file_name": args.file_name,
+#         "input_file_path": args.file or "",
+#         "open_file_upon_completion": args.open,
+#         "show_file_location_upon_completion": args.finder,
+#         "quiet": args.quiet,
+#     }
+#
+#     module = get_module(args.file)
+#     config = {
+#         "module": module,
+#         "scene_names": args.scene_names,
+#         "file_writer_config": file_writer_config,
+#         "quiet": args.quiet or args.write_all,
+#         "write_all": args.write_all,
+#         "start_at_animation_number": args.start_at_animation_number,
+#         "preview": not write_file,
+#         "end_at_animation_number": None,
+#         "leave_progress_bars": args.leave_progress_bars,
+#     }
+#
+#     # Camera configuration
+#     config["camera_config"] = get_camera_configuration(args, custom_config)
+#
+#     # Default to making window half the screen size
+#     # but make it full screen if -f is passed in
+#     monitor = get_monitors()[custom_config["window_monitor"]]
+#     window_width = monitor.width
+#     if not args.full_screen:
+#         window_width //= 2
+#     window_height = window_width * 9 // 16
+#     config["window_config"] = {
+#         "size": (window_width, window_height),
+#     }
+#
+#     # Arguments related to skipping
+#     stan = config["start_at_animation_number"]
+#     if stan is not None:
+#         if "," in stan:
+#             start, end = stan.split(",")
+#             config["start_at_animation_number"] = int(start)
+#             config["end_at_animation_number"] = int(end)
+#         else:
+#             config["start_at_animation_number"] = int(stan)
+#
+#     config["skip_animations"] = any([
+#         args.skip_animations,
+#         args.start_at_animation_number,
+#     ])
+#     return config
 
 
 def get_camera_configuration(args, custom_config):

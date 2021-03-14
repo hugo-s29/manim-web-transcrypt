@@ -1,7 +1,7 @@
-# from functools import reduce
+from manimlib.modules.functools import reduce
 import inspect
 # import numpy as np
-# import operator as op
+import manimlib.modules.operator as op
 
 
 def sigmoid(x):

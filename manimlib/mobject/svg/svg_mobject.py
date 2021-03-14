@@ -1,8 +1,7 @@
 import itertools as it
 import re
-# import string
+import manimlib.modules.string
 import warnings
-# import os
 # import hashlib
 
 # from xml.dom import minidom
@@ -52,12 +51,13 @@ class SVGMobject(VMobject):
         "path_string_config": {}
     }
 
-    def __init__(self, file_name=None, **kwargs):
+    def __init__(self, file_data=None, **kwargs):
         digest_config(self, kwargs)
-        self.file_name = file_name or self.file_name
-        if file_name is None:
-            raise Exception("Must specify file for SVGMobject")
-        self.file_path = get_full_vector_image_path(file_name)
+
+        if file_data is None:
+            raise Exception('file_data must be defined, however it is None')
+
+        self.file_data = file_data
 
         super().__init__(**kwargs)
         self.move_into_position()
@@ -71,7 +71,7 @@ class SVGMobject(VMobject):
             self.set_width(self.width)
 
     def init_points(self):
-        doc = minidom.parse(self.file_path)
+        doc = minidom.parseString(self.file_data)
         self.ref_to_element = {}
 
         for svg in doc.getElementsByTagName("svg"):
@@ -335,26 +335,21 @@ class VMobjectFromSVGPathstring(VMobject):
         # don't need to retrace the same computation.
         hasher = hashlib.sha256(self.path_string.encode())
         path_hash = hasher.hexdigest()[:16]
-        points_filepath = os.path.join(get_mobject_data_dir(), f"{path_hash}_points.npy")
-        tris_filepath = os.path.join(get_mobject_data_dir(), f"{path_hash}_tris.npy")
 
-        if os.path.exists(points_filepath) and os.path.exists(tris_filepath):
-            self.set_points(np.load(points_filepath))
-        else:
-            self.relative_point = np.array(ORIGIN)
-            for command, coord_string in self.get_commands_and_coord_strings():
-                new_points = self.string_to_points(command, coord_string)
-                self.handle_command(command, new_points)
-            if self.should_subdivide_sharp_curves:
-                # For a healthy triangulation later
-                self.subdivide_sharp_curves()
-            if self.should_remove_null_curves:
-                # Get rid of any null curves
-                self.set_points(self.get_points_without_null_curves())
-            # SVG treats y-coordinate differently
-            self.stretch(-1, 1, about_point=ORIGIN)
-            # Save to a file for future use
-            np.save(points_filepath, self.get_points())
+        self.relative_point = np.array(ORIGIN)
+        for command, coord_string in self.get_commands_and_coord_strings():
+            new_points = self.string_to_points(command, coord_string)
+            self.handle_command(command, new_points)
+        if self.should_subdivide_sharp_curves:
+            # For a healthy triangulation later
+            self.subdivide_sharp_curves()
+        if self.should_remove_null_curves:
+            # Get rid of any null curves
+            self.set_points(self.get_points_without_null_curves())
+        # SVG treats y-coordinate differently
+        self.stretch(-1, 1, about_point=ORIGIN)
+        # Save to a file for future use
+        np.save(points_filepath, self.get_points())
 
     def get_commands_and_coord_strings(self):
         all_commands = list(self.get_command_to_function_map().keys())

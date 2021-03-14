@@ -2,14 +2,8 @@ import inspect
 import sys
 import logging
 
-from manimlib.scene.scene import Scene
+from scene.scene import Scene
 from manimlib.config import get_custom_config
-
-
-class BlankScene(Scene):
-    def construct(self):
-        exec(get_custom_config()["universal_import_line"])
-        self.embed()
 
 
 def is_child_scene(obj, module):
@@ -65,6 +59,7 @@ def get_scene_config(config):
 
 
 def get_scenes_to_render(scene_classes, scene_config, config):
+    print('AAA')
     if config["write_all"]:
         return [sc(**scene_config) for sc in scene_classes]
 
@@ -108,8 +103,7 @@ def main(config):
     module = config["module"]
     scene_config = get_scene_config(config)
     if module is None:
-        # If no module was passed in, just play the blank scene
-        return [BlankScene(**scene_config)]
+        raise Exception('Module not found')
 
     all_scene_classes = get_scene_classes_from_module(module)
     scenes = get_scenes_to_render(all_scene_classes, scene_config, config)

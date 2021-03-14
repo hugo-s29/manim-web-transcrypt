@@ -1,5 +1,5 @@
 import re
-# import string
+import manimlib.modules.string
 
 
 def to_camel_case(name):

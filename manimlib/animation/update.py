@@ -1,4 +1,4 @@
-# import operator as op
+import manimlib.modules.operator as op
 
 from manimlib.animation.animation import Animation
 

@@ -1,9 +1,9 @@
-# import copy
+import manimlib.modules.copy
 # import hashlib
 # import os
 import re
 import typing
-# from contextlib import contextmanager
+# from manimlib.modules.contextlib import contextmanager
 # from pathlib import Path
 
 # import manimpango
@@ -259,7 +259,8 @@ def register_font(font_file: typing.Union[str, Path]):
         raise FileNotFoundError(error)
 
     try:
-        assert manimpango.register_font(str(file_path))
+        ok = manimpango.register_font(str(file_path))
+        assert ok
         yield
     finally:
         manimpango.unregister_font(str(file_path))

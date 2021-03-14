@@ -1,6 +1,6 @@
-from functools import reduce
+from manimlib.modules.functools import reduce
 import itertools as it
-import operator as op
+import manimlib.modules.operator as op
 
 # import numpy as np
 

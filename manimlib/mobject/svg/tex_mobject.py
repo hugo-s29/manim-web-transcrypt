@@ -1,5 +1,5 @@
-# from functools import reduce
-# import operator as op
+from manimlib.modules.functools import reduce
+import manimlib.modules.operator as op
 import re
 import itertools as it
 

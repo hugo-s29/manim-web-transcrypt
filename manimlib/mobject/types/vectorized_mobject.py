@@ -1,8 +1,8 @@
 import itertools as it
-# import operator as op
+import manimlib.modules.operator as op
 # import moderngl
 
-# from functools import reduce, wraps
+from manimlib.modules.functools import reduce, wraps
 
 from manimlib.constants import *
 from manimlib.mobject.mobject import Mobject

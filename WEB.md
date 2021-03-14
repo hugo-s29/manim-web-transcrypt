@@ -6,33 +6,33 @@ It is important to consider that creating an implementation of numpy in javascri
 For further information about the way libraries are used when they are converted to javascript, please consult the documentation of [*Transcrypt*](https://transcrypt.org/docs/html/index.html)
 
 ## Libraries to implement in javascript
-- numpy
-- os
-- mapbox_earcut
-- yaml
-- screeninfo
-- importlib
-- colour
-- argparse
-- urllib.request
-- validators
-- operator
-- functools
-- scipy
-- PIL
-- copy
-- moderngl
-- matplotlib.cm
-- enum
-- manimpango
-- minidom
-- hashlib
-- Path
-- contextlib
-- moderngl_window
-- subprocess
-- PygletWindowKeys
-- numbers
+- [ ] numpy
+- [ ] os (normally not needed in the browser)
+- [ ] mapbox_earcut
+- [ ] yaml
+- [ ] screeninfo (normally not needed in the browser)
+- [ ] importlib
+- [ ] colour
+- [ ] argparse (normally not needed in the browser)
+- [ ] urllib.request
+- [ ] validators
+- [ ] operator
+- [x] functools
+- [ ] scipy
+- [ ] PIL
+- [x] copy
+- [ ] moderngl
+- [ ] matplotlib.cm
+- [ ] enum
+- [ ] manimpango
+- [ ] minidom
+- [ ] hashlib
+- [ ] Path (normally not needed in the browser)
+- [ ] contextlib (to remove from the code, doesn't work in javascript)
+- [ ] moderngl_window (normally not needed in the browser)
+- [ ] subprocess (normally not needed in the browser)
+- [ ] PygletWindowKeys
+- [ ] numbers
 
 ## Numpy functions
 All the lines where numpy functions were called can be found in the file named *numpy-functions.txt*. They can serve as examples for the numpy implementation.

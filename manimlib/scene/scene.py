@@ -3,7 +3,7 @@ import random
 # import platform
 import itertools as it
 import logging
-# from functools import wraps
+from manimlib.modules.functools import wraps
 
 # from tqdm import tqdm as ProgressDisplay
 # import numpy as np

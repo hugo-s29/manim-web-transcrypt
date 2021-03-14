@@ -1,9 +1,9 @@
-# import copy
+import manimlib.modules.copy
 import itertools as it
 import random
 import sys
 # import moderngl
-# from functools import wraps
+from manimlib.modules.functools import wraps
 
 # import numpy as np
 

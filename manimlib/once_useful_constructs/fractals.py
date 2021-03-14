@@ -1,4 +1,4 @@
-from functools import reduce
+from manimlib.modules.functools import reduce
 
 from manimlib.constants import *
 # from manimlib.for_3b1b_videos.pi_creature import PiCreature

@@ -2,7 +2,7 @@
 import re
 # import moderngl
 # import numpy as np
-# import copy
+import manimlib.modules.copy as copy
 
 import manimlib.utils.directories as directories
 import manimlib.utils.file_ops as file_ops

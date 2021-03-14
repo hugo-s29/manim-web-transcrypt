@@ -2,7 +2,6 @@ import logging
 import sys
 # import os
 # import hashlib
-# from contextlib import contextmanager
 
 from manimlib.utils.directories import get_tex_dir
 from manimlib.config import get_manim_dir
@@ -16,10 +15,8 @@ def get_tex_config():
     """
     Returns a dict which should look something like this:
     {
-        "executable": "latex",
-        "template_file": "tex_template.tex",
-        "intermediate_filetype": "dvi",
         "text_to_replace": "YourTextHere",
+        "template_file": "tex_template.tex",
         "tex_body": "..."
     }
     """
@@ -27,13 +24,6 @@ def get_tex_config():
     if not SAVED_TEX_CONFIG:
         custom_config = get_custom_config()
         SAVED_TEX_CONFIG.update(custom_config["tex"])
-        # Read in template file
-        template_filename = os.path.join(
-            get_manim_dir(), "manimlib", "tex_templates",
-            SAVED_TEX_CONFIG["template_file"],
-        )
-        with open(template_filename, "r") as file:
-            SAVED_TEX_CONFIG["tex_body"] = file.read()
     return SAVED_TEX_CONFIG
 
 
@@ -53,51 +43,20 @@ def tex_to_svg_file(tex_file_content):
     return svg_file
 
 
-def tex_to_svg(tex_file_content, svg_file):
-    tex_file = svg_file.replace(".svg", ".tex")
-    with open(tex_file, "w", encoding="utf-8") as outfile:
-        outfile.write(tex_file_content)
-    svg_file = dvi_to_svg(tex_to_dvi(tex_file))
-
-    # Cleanup superfluous documents
-    tex_dir, name = os.path.split(svg_file)
-    stem, end = name.split(".")
-    for file in filter(lambda s: s.startswith(stem), os.listdir(tex_dir)):
-        if not file.endswith(end):
-            os.remove(os.path.join(tex_dir, file))
+def tex_to_svg(tex_file_content):
+    tex_config = get_tex_config()
+    try:
+        window.util.tex_to_svg(tex_file_content)
+    except Exception as err:
+        log_file = tex_file.replace(".tex", ".log")
+        logging.log(
+            logging.ERROR,
+            "\n\n LaTeX Error!  Not a worry, it happens to the best of us.\n"
+        )
+        logging.log(logging.DEBUG, str(err))
 
     return svg_file
 
-
-def tex_to_dvi(tex_file):
-    tex_config = get_tex_config()
-    program = tex_config["executable"]
-    file_type = tex_config["intermediate_filetype"]
-    result = tex_file.replace(".tex", "." + file_type)
-    if not os.path.exists(result):
-        commands = [
-            program,
-            "-interaction=batchmode",
-            "-halt-on-error",
-            f"-output-directory=\"{os.path.dirname(tex_file)}\"",
-            f"\"{tex_file}\"",
-            ">",
-            os.devnull
-        ]
-        exit_code = os.system(" ".join(commands))
-        if exit_code != 0:
-            log_file = tex_file.replace(".tex", ".log")
-            logging.log(
-                logging.ERROR,
-                "\n\n LaTeX Error!  Not a worry, it happens to the best of us.\n"
-            )
-            with open(log_file, "r") as file:
-                for line in file.readlines():
-                    if line.startswith("!"):
-                        print(line[1:])
-                        logging.log(logging.INFO, line)
-            sys.exit(2)
-    return result
 
 
 def dvi_to_svg(dvi_file, regen_if_exists=False):

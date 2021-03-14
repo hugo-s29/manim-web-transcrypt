@@ -258,12 +258,6 @@ E:\Animations\manim-original\manimlib\utils\space_ops.py:82 => np.arange(dim)
 
 
 ################################
-np.arcos
-################################
-
-
-
-################################
 np.arccos
 ################################
 E:\Animations\manim-original\manimlib\camera\camera.py:70 => np.arccos(Fz[2])

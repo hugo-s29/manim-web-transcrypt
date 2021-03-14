@@ -1,4 +1,4 @@
-from copy import deepcopy
+from manimlib.modules.copy import deepcopy
 import itertools as it
 
 from manimlib.constants import *
